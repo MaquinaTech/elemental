@@ -1,16 +1,16 @@
-# Proyecto: Elemental
+# Project: Elemental
 
-Este proyecto es una solución para una prueba técnica ofrecida por la empresa Laurel Gaming a Nicolás López de Lerma López. 
-El objetivo de la prueba es implementar una aplicación móvil utilizando React Native con Expo.
+This project is a solution for a technical test offered by the Laurel Gaming company to Nicolás López de Lerma López. 
+The goal of the test is to deploy a mobile app using React Native with Expo.
 
-## Requisitos previos
-Antes de comenzar con la instalación del proyecto, asegúrate de tener lo siguiente instalado en tu máquina:
+## Prerequisites
+Before you begin installing the project, make sure you have the following installed on your machine:
 
-    Node.js (Versión recomendada: LTS)
-    npm (Viene junto con Node.js)
-    Expo CLI (Para correr la aplicación en un entorno de desarrollo móvil)
+    Node.js (Recomended Version: LTS)
+    npm (Comes bundled with Node.js)
+    Expo CLI (To run the application in a mobile development environment)
 
-Puedes verificar que todo esté correctamente instalado ejecutando los siguientes comandos en la terminal:
+You can verify that everything is installed correctly by running the following commands in the terminal:
    ```bash
    node -v
    npm -v
@@ -19,27 +19,39 @@ Puedes verificar que todo esté correctamente instalado ejecutando los siguiente
 
 
 
-## Instalación
-Siga estos pasos para inicializar el proyecto:
+## Instalation
+Follow these steps to initialize the project:
 
-1. **Clonar el repositorio:**
+1. **Clone repository:**
    ```bash
-   git clone https://github.com/usuario/nombre-del-repositorio.git
-   cd nombre-del-repositorio
+   git clone https://github.com/MaquinaTech/elemental.git
+   cd elemental
    ```
 
-2. **Instalar dependencias:**
+2. **Install dependencies:**
    ```bash
    npm install
    ```
 
-3. **Iniciar la aplicación:**
+3. **Init App:**
    ```bash
    npx expo start
    ```
 
-## Uso
+## Usage
 
-* Si tienes la aplicación Expo Go instalada en tu dispositivo, escanea el código QR desde la aplicación para cargar la app.
+* If you have the Expo Go app installed on your device, scan the QR code from within the app to load the app.
 
-* Alternativamente, puedes usar un emulador de Android o iOS para ejecutar la aplicación.
+* Alternatively, you can use an Android or iOS emulator to run the app.
+
+## Improvements
+
+* Animations when changing screens
+
+* Stronger screen flow structure
+
+* User authentication
+
+* Improved performance of some components
+
+* Improvement in the animation hook
