@@ -16,7 +16,7 @@ const AuthInputField: React.FC<AuthInputFieldProps> = ({ label, error, touched, 
                 {...props}
                 style={[styles.input, hasError ? styles.inputError : undefined]}
                 placeholder={label}
-                placeholderTextColor="#888" // Color para el texto del placeholder
+                placeholderTextColor="#ccc"
             />
             {hasError && <Text style={styles.errorText}>{error}</Text>}
         </View>

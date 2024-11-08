@@ -10,9 +10,9 @@ const ResultComponent: React.FC<Props> = ({ winner }) => {
 
     const handleWinner = () => {
         if (winner === 'player') {
-            return '¡Victoria!';
+            return '¡Victory!';
         } else {
-            return '¡Derrota!';
+            return '¡Defeat!';
         }
     }
 

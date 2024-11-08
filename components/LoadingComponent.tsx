@@ -1,5 +1,4 @@
-import React from 'react';
-import { View, Image, StyleSheet, Dimensions } from 'react-native';
+import { View, StyleSheet, Dimensions } from 'react-native';
 import Animated, { Easing, useSharedValue, useAnimatedStyle, withRepeat, withTiming, interpolate } from 'react-native-reanimated';
 
 const LoadingComponent = () => {

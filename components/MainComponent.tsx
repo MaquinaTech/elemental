@@ -61,7 +61,6 @@ const MainComponent: React.FC = () => {
 
 export default memo(MainComponent);
 
-// Estilos constantes optimizados
 const styles = StyleSheet.create({
     container: {
         flex: 1,

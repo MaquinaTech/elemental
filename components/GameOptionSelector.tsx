@@ -1,5 +1,4 @@
-// GameOptionSelector.tsx
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import Animated from 'react-native-reanimated';
 import useGameLogic from '../hooks/useGameLogic';

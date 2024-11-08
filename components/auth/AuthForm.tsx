@@ -9,15 +9,15 @@ import { useCallback } from 'react';
 
 const validationSchema = Yup.object().shape({
     name: Yup.string()
-        .min(1, 'Mínimo 3 caracteres')
-        .required('Nombre obligatorio'),
+        .min(1, 'Minimum 1 character')
+        .required('Name is required'),
     username: Yup.string()
-        .matches(/^[a-zA-Z0-9]+$/, 'Sin espacios ni símbolos')
-        .min(3, 'Mínimo 3 caracteres')
-        .required('Nombre de usuario obligatorio'),
+        .matches(/^[a-zA-Z0-9]+$/, 'Only alphanumeric characters')
+        .min(3, 'Minimum 3 characters')
+        .required('Username is required'),
     email: Yup.string()
-        .email('Correo inválido')
-        .required('Correo obligatorio'),
+        .email('Ivalid email')
+        .required('Email is required'),
 });
 
 
@@ -26,12 +26,12 @@ const AuthForm: React.FC = () => {
 
     const handleSubmit = useCallback((values: User) => {
         dispatch(login(values));
-        Alert.alert('¡Bienvenido!', 'Has sido autenticado correctamente.');
+        Alert.alert('¡Welcome!', 'You have been registered successfully');
     }, [dispatch]);
 
     return (
         <>
-            <Text style={styles.title}>Autenticación</Text>
+            <Text style={styles.title}>Register</Text>
             <Formik
                 initialValues={{ name: '', username: '', email: '', isAdult: false }}
                 validationSchema={validationSchema}
