@@ -1,37 +1,43 @@
-import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
-import { useFonts } from 'expo-font';
-import { Stack } from 'expo-router';
-import * as SplashScreen from 'expo-splash-screen';
 import { useEffect } from 'react';
-import 'react-native-reanimated';
+import { useFonts } from 'expo-font';
+import * as SplashScreen from 'expo-splash-screen';
+import { Provider } from 'react-redux';
+import store from '@/redux/store';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+import MainComponent from '@/components/MainComponent';
+import { StyleSheet } from 'react-native';
 
-import { useColorScheme } from '@/hooks/useColorScheme';
-
-// Prevent the splash screen from auto-hiding before asset loading is complete.
+// Prevent splash screen from auto-hiding
 SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout() {
-  const colorScheme = useColorScheme();
-  const [loaded] = useFonts({
-    SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
-  });
+    const [loaded] = useFonts({
+        Samsung: require('../assets/fonts/Samsung.ttf'),
+        SamsungMedium: require('../assets/fonts/SamsungMedium.ttf'),
+        SamsungBold: require('../assets/fonts/SamsungBold.ttf')
+    });
 
-  useEffect(() => {
-    if (loaded) {
-      SplashScreen.hideAsync();
+    useEffect(() => {
+        if (loaded) {
+            SplashScreen.hideAsync();
+        }
+    }, [loaded]);
+
+    if (!loaded) {
+        return null;
     }
-  }, [loaded]);
 
-  if (!loaded) {
-    return null;
-  }
-
-  return (
-    <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <Stack>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen name="+not-found" />
-      </Stack>
-    </ThemeProvider>
-  );
+    return (
+        <Provider store={store}>
+            <SafeAreaProvider style={styles.safeArea}>
+                <MainComponent />
+            </SafeAreaProvider>
+        </Provider>
+    );
 }
+
+const styles = StyleSheet.create({
+    safeArea: {
+        backgroundColor: '#ececec'
+    }
+});

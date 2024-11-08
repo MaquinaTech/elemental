@@ -1,50 +1,45 @@
-# Welcome to your Expo app 👋
+# Proyecto: Elemental
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Este proyecto es una solución para una prueba técnica ofrecida por la empresa Laurel Gaming a Nicolás López de Lerma López. 
+El objetivo de la prueba es implementar una aplicación móvil utilizando React Native con Expo.
 
-## Get started
+## Requisitos previos
+Antes de comenzar con la instalación del proyecto, asegúrate de tener lo siguiente instalado en tu máquina:
 
-1. Install dependencies
+    Node.js (Versión recomendada: LTS)
+    npm (Viene junto con Node.js)
+    Expo CLI (Para correr la aplicación en un entorno de desarrollo móvil)
 
+Puedes verificar que todo esté correctamente instalado ejecutando los siguientes comandos en la terminal:
+   ```bash
+   node -v
+   npm -v
+   expo --version
+   ```
+
+
+
+## Instalación
+Siga estos pasos para inicializar el proyecto:
+
+1. **Clonar el repositorio:**
+   ```bash
+   git clone https://github.com/usuario/nombre-del-repositorio.git
+   cd nombre-del-repositorio
+   ```
+
+2. **Instalar dependencias:**
    ```bash
    npm install
    ```
 
-2. Start the app
-
+3. **Iniciar la aplicación:**
    ```bash
-    npx expo start
+   npx expo start
    ```
 
-In the output, you'll find options to open the app in a
+## Uso
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+* Si tienes la aplicación Expo Go instalada en tu dispositivo, escanea el código QR desde la aplicación para cargar la app.
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+* Alternativamente, puedes usar un emulador de Android o iOS para ejecutar la aplicación.
